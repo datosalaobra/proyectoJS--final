@@ -34,9 +34,8 @@ function ingresar(){
                 toast: true,
                 position: 'top',
                 showConfirmButton: false,
-                color: '#007fff',
                 iconColor:'#1affd5',
-                timer: 1000,
+                timer: 1500,
                 timerProgressBar: true,
                 didOpen: (toast) => {
                   toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -58,9 +57,8 @@ function ingresar(){
                 toast: true,
                 position: 'top',
                 showConfirmButton: false,
-                color: '#007fff',
                 iconColor:'#1affd5',
-                timer: 2000,
+                timer: 1500,
                 timerProgressBar: true,
                 didOpen: (toast1) => {
                   toast1.addEventListener('mouseenter', Swal.stopTimer)
