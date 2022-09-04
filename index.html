@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Login</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Css -->
+  <link rel="stylesheet" href="./CSS/main.css">
+
+  <!-- Sweet alert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- JavaScript -->
+  <script defer src="./JS/variables.js"></script>
+  <script defer src="./JS/main.js"></script>
+  <script defer src="./JS/registro.js" ></script>
+  <script defer src="./JS/inicioSesion.js"></script>
+  <script defer src="./JS/formulario.js" ></script>
+
+</head>
+<body>
+  <main>
+    <div class="contenedorPrincipal">
+
+      <div class="cajaFondo">
+        <div class="cajaLogin">
+          <h1>¿Ya tienes una cuenta?</h1>
+          <p>Inicia sesión para comenzar</p>
+          <button id="btnIniciarSesion">Iniciar Sesión</button>
+        </div>
+
+        <div class="cajaRegistro">
+          <h1>¿Aún no tienes una cuenta?</h1>
+          <p>Regístrate para que puedas iniciar sesión</p>
+          <button id="btnRegistrarse">Regístrarse</button>
+        </div>
+      </div>
+      <!-- Formulario de login y registro -->
+      <div class="contenedorLoginRegistro">
+        <!-- Login -->
+        <form action="" class="formularioLogin">
+          <h2>Iniciar Sesión</h2>
+          <input type="email" class="formulario__input" placeholder="Correo electronico" name="" id="txtCorreoIngresado">
+          <input type="password" class="formulario__input" placeholder="Contraseña" name="" id="txtpasswordIngresada">
+          <button id="btnIngresar">Ingresar</button>
+        </form>
+        <!-- Regístro -->
+        <form action="" class="formularioRegistro" id="formularioResgistro">
+          <h2>Regístrarse</h2>
+          <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="txtNombreCompleto" placeholder="Nombre Completo">
+              <i class="formulario__validacion-estado fas fa-times-circle" aria-hidden="true">
+              </i>
+            </div>
+            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+          </div>
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="txtCorreoUsuario" placeholder="Correo electronico">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+          </div>
+    
+          <!-- Grupo: Contraseña -->
+          <div class="formulario__grupo" id="grupo__password">
+            <div class="formulario__grupo-input">
+              <input type="password" class="formulario__input" name="password" id="password" placeholder="Ingrese una contraseña">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+          </div>
+          <!-- Grupo: Repetir Contraseña -->
+          <div class="formulario__grupo" id="grupo__password2">
+            <div class="formulario__grupo-input">
+              <input type="password" class="formulario__input" name="password2" id="password2" placeholder="Repetir contraseña">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+          </div>
+          <select class="mySelect" id="mySelect" name="mySelect">
+            <option value="-1">Indique su rol:</option>
+          </select>
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+          </div>
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn" id="btnGuardar">Guardar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Se ha registrado exitosamente!</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+<footer>
+  <p>Todos los derechos reservados. Sitio desarrollado por Diego Eme de Datos a la Obra &copy; 2022</p>
+</footer> 
+
+  <!-- CDN Font-aweome -->
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
