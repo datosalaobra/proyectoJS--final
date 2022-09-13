@@ -123,7 +123,7 @@ body {
         border-image: linear-gradient(to left, #d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%) 1; }
   body footer {
     position: fixed;
-    background-color: black;
+    background-color: #100a1f;
     color: white;
     bottom: 0;
     width: 100%;
@@ -132,6 +132,70 @@ body {
     font-weight: bold;
     font-size: .8rem;
     text-align: center; }
+  body .contenedor {
+    width: 100%;
+    margin: 40px auto 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; }
+  body .contenedor .pelicula {
+    text-align: center; }
+  body .contenedor .pelicula .titulo {
+    width: 90%;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 10%;
+    background: #100a1f;
+    color: #fff;
+    backdrop-filter: blur(0.625rem);
+    background-color: rgba(11, 11, 11, 0.4);
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 3.125rem;
+    text-overflow: auto; }
+  body .contenedor .pelicula .poster {
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 3.125rem; }
+  body .paginaUser {
+    position: fixed;
+    bottom: 0;
+    background: #100a1f;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px; }
+  body .paginaUser button {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    background: #007fff;
+    color: #fff;
+    border-radius: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: .3s ease all;
+    margin-bottom: 3%;
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 3.125rem; }
+  body .paginaUser button:hover {
+    background: #1affd5; }
   body .test {
     display: flex;
     width: 100%;
