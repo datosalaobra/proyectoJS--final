@@ -4,7 +4,7 @@ window.onload = function() {
         let rol = ["Administrador", "Usuario Cliente"];
     //for each
         rol.forEach(element => {
-           let opcion = document.createElement("option");
+        let opcion = document.createElement("option");
             document.querySelector("#mySelect").appendChild(opcion);
             opcion.innerHTML = element;
         });
@@ -93,8 +93,8 @@ function validarCredenciales(pCorreo, ppassword){
 
 function timeOutAdmin(){
     setTimeout(function(){window.location.href = './pages/userAdim.html'; },1000);
-  }
+}
   
 function timeOutCliente(){
     setTimeout(function(){window.location.href = './pages/userCliente.html'; },1000);
-  }
+}
