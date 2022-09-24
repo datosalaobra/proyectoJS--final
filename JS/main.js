@@ -1,7 +1,7 @@
 //evento onload
 window.onload = function() {
     //array
-        let rol = ["Administrador", "Usuario Cliente"];
+        let rol = ["Plan Premium", "Plan Básico"];
     //for each
         rol.forEach(element => {
         let opcion = document.createElement("option");
@@ -91,10 +91,10 @@ function validarCredenciales(pCorreo, ppassword){
     return bAcceso;
 }
 
-function timeOutAdmin(){
-    setTimeout(function(){window.location.href = './pages/userAdim.html'; },1000);
+function timeOutPremium(){
+    setTimeout(function(){window.location.href = './pages/userPremium'; },1000);
 }
   
-function timeOutCliente(){
-    setTimeout(function(){window.location.href = './pages/userCliente.html'; },1000);
+function timeOutBasico(){
+    setTimeout(function(){window.location.href = './pages/userStandar.html'; },1000);
 }

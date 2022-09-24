@@ -29,7 +29,7 @@ botonIngresar.onclick = (e) =>{
 function ingresar(){
     let rol = sessionStorage.getItem('rolUsuarioActivo');
     switch(rol){
-        case 'Administrador':
+        case 'Plan Premium':
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top',
@@ -40,7 +40,7 @@ function ingresar(){
                 didOpen: (toast) => {
                   toast.addEventListener('mouseenter', Swal.stopTimer)
                   toast.addEventListener('mouseleave', Swal.resumeTimer)
-                  toast.addEventListener('mouseleave', timeOutAdmin())
+                  toast.addEventListener('mouseleave', timeOutPremium())
                 }
               })
               Toast.fire({
@@ -52,7 +52,7 @@ function ingresar(){
               })
                           
         break;
-        case 'Usuario Cliente':
+        case 'Plan Básico':
             const Toast1 = Swal.mixin({
                 toast: true,
                 position: 'top',
@@ -63,7 +63,7 @@ function ingresar(){
                 didOpen: (toast1) => {
                   toast1.addEventListener('mouseenter', Swal.stopTimer)
                   toast1.addEventListener('mouseleave', Swal.resumeTimer)
-                  toast1.addEventListener('mouseleave',  timeOutCliente())                  
+                  toast1.addEventListener('mouseleave',  timeOutBasico())                  
                 }
               })
               Toast1.fire({
