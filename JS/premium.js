@@ -32,16 +32,18 @@ const cargarPeliculas = async() => {
 					<div class="pelicula">
 						<div class="card mb-3" style="max-width: 540px;">
 							<div class="row g-0">
+							<h2 class="calificacion">${pelicula.vote_average}</h2>
 								<div class="col-md-4">
 									<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
 								</div>
 									<div class="col-md-8">
 										<div class="card-body">
-											<h1 class="card-title">${pelicula.title}</h1>
-											<h2>${pelicula.vote_average}</h2>
-											<p class="card-text">${pelicula.overview}</p>
-											<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.backdrop_path}">
-											<p class="card-text"><small class="text-muted">${pelicula.release_date}</small></p>
+											<h1 class="titulo">${pelicula.title}</h1>
+											<div class="overview">
+											<p class="card-fecha"><small class="text-muted">Fecha de estreno: ${pelicula.release_date}.</small></p>
+											<p class="card-text">Sinopsis: ${pelicula.overview}</p>
+											<img class="poster-end" src="https://image.tmdb.org/t/p/w500/${pelicula.backdrop_path}">
+											</div>
 										</div>
 								</div>
 							</div>

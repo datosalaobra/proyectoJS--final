@@ -6,6 +6,11 @@
     text-decoration: none;
     font-family: 'Anek Telugu', sans-serif;
 }
+//-----------------------------Import--------------------
+// importamos las variables
+@import "utilities/variables";
+// importamos mixins
+@import "utilities/mixin";
 //-----------------------------Nesting-------------------
 body{
     min-height: 100vh;
@@ -41,7 +46,7 @@ body{
             }
             .cajaFondo div{
                 margin: 6rem 2rem;
-                color: white;
+                color: $color-text;
                 transition: all 500ms;
             }
             .cajaFondo div p,
@@ -57,16 +62,16 @@ body{
                 border-bottom-right-radius: 1rem;
                 font-size: 1rem;
                 font-weight: bold;
-                color: white;
+                color: $color-text;
                 border: 2px solid;
-                background-color: #d4dcff;
-                background-image: linear-gradient(62deg, #d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%);
+                background-color: $color-secundario;
+                background-image: linear-gradient(62deg, $color-secundario 0%, $gradiente-color-principal 30%, $color-principal 66%, $color-complementario 100%);
                 cursor: pointer;
                 transition: all 300ms;
             }
             .cajaFondo button:hover{
                 border: 2px solid transparent;
-                border-image: linear-gradient(to left,#d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%)1;
+                border-image: linear-gradient(to left,$color-secundario 0%, $gradiente-color-principal 30%, $color-principal 66%, $color-complementario 100%)1;
                 font-size: 0.9rem;
             }
               /* Formularios */
@@ -85,7 +90,7 @@ body{
                     height: auto;
                     width: 100%;
                     padding: 3rem 1.1rem;
-                    background-color: white;
+                    background-color: $color-text;
                     position: absolute;
                     border-top-right-radius: 3.125rem;
                     border-bottom-right-radius: 0.625rem;
@@ -98,7 +103,7 @@ body{
                     height: auto;
                     width: 100%;
                     padding: 3rem 1.1rem;
-                    background-color: white;
+                    background-color: $color-text;
                     position: absolute;
                     border-top-right-radius: 3.125rem;
                     border-bottom-right-radius: 0.625rem;
@@ -114,7 +119,7 @@ body{
                 font-size: 1.8rem;
                 text-align: center;
                 margin-bottom: 0.5rem;
-                color: #7d83ff;
+                color: $gradiente-color-principal;
             }
             .contenedorLoginRegistro form button{
                 margin-top: 1rem;
@@ -122,16 +127,16 @@ body{
                 border-bottom-right-radius: 1rem;
                 font-size: 1rem;
                 font-weight: bold;
-                color: white;
-                border: 2px solid #d4dcff;
-                background-color: #d4dcff;
-                background-image: linear-gradient(62deg, #d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%);
+                color: $color-text;
+                border: 2px solid $color-secundario;
+                background-color: $color-secundario;
+                background-image: linear-gradient(62deg, $color-secundario 0%, $gradiente-color-principal 30%, $color-principal 66%, $color-complementario 100%);
                 cursor: pointer;
                 transition: all 300ms;
             }
             .contenedorLoginRegistro form button:hover{
                 border: 2px solid transparent;
-                border-image: linear-gradient(to left,#d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%)1;
+                border-image: linear-gradient(to left,$color-secundario 0%, $gradiente-color-principal 30%, $color-principal 66%, $color-complementario 100%)1;
             }
         }
     }
@@ -139,7 +144,7 @@ body{
     footer{
         position: fixed;
         background-color: #100a1f;
-        color: white;
+        color: $color-text;
         bottom: 0;
         width: 100%;
         height: 5%;
@@ -163,35 +168,47 @@ body{
     }
     
     .contenedor .pelicula .titulo {
-        width: 90%;
-        font-size: 16px;
+        width: auto;
+        font-size: 1.3rem;
         font-weight: 600;
         margin-left: 3%;
         margin-right: 3%;
-        margin-bottom: 10%;
-        background: #100a1f;
-        color: #fff;
+        margin-bottom: 5%;
+        padding: auto;
+        background: $color-text-dark;
+        color: $color-text;
         backdrop-filter: blur(0.625rem);
         background-color: rgba(11, 11, 11, 0.4);
         border-top-right-radius: 3.125rem;
         border-bottom-right-radius: 0.625rem;
         border-top-left-radius: 0.625rem;
         border-bottom-left-radius: 3.125rem;
-        text-overflow: auto;
+        box-shadow: 5px 8px 12px $color-text-dark;
+        text-overflow: hidden;
     }
     
     .contenedor .pelicula .poster {
-        width: 90%;
-        margin-bottom: 10px;
-        margin-left: 3%;
-        margin-right: 3%;
+        width: 80%;
+        height: 20rem;
+        margin: 5% 2% 2% 3%;
         border-top-right-radius: 3.125rem;
         border-bottom-right-radius: 0.625rem;
         border-top-left-radius: 0.625rem;
         border-bottom-left-radius: 3.125rem;
+        box-shadow: 5px 8px 12px $color-text-dark;
     }
-    
-    .pageStandar {
+    .poster-end{
+        width: 80%;
+        height: auto;
+        margin: 3% 2% 2% 3%;
+        border-top-right-radius: 3.125rem;
+        border-bottom-right-radius: 0.625rem;
+        border-top-left-radius: 0.625rem;
+        border-bottom-left-radius: 3.125rem;
+        box-shadow: 5px 8px 12px $color-text-dark;
+        
+    }
+    %pagesUser{
         position: fixed;
         bottom: 0;
         background: #100a1f;
@@ -201,8 +218,13 @@ body{
         gap: 20px;
         padding: 10px;
     }
-    
-    .pageStandar button {
+    .pageStandar {
+        @extend %pagesUser
+    }
+    .pagePremium{
+        @extend %pagesUser
+    }
+    %buttons{
         cursor: pointer;
         border: none;
         display: flex;
@@ -211,8 +233,8 @@ body{
         text-align: center;
         height: 50px;
         width: 200px;
-        background: #007fff;
-        color: #fff;
+        background: $color-principal;
+        color: $color-text;
         border-radius: 100px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
@@ -223,21 +245,55 @@ body{
         border-top-left-radius: 0.625rem;
         border-bottom-left-radius: 3.125rem;
     }
+    .pageStandar button {
+        @extend %buttons;
+    }
+    .pagePremium button{
+        @extend %buttons;
+    }
     
     .pageStandar button:hover {
-        background: #1affd5;
+        background: $color-complementario;
     }
-    // .test{
-    //     display: flex;
-    //     width: 100%;
-    //     height: 50%;
-    //     backdrop-filter: blur(0.625rem);
-    //     background-color: rgba(11, 11, 11, 0.4);
-    //     justify-content: center;
-    //     color: white;
-    //     text-shadow: black 0.1em 0.1em 0.2em;
-    //     font-size: 50px;
-    // }
+    .card-body{
+        height: auto;
+    }
+    .calificacion{
+        width: 3rem;
+        display: inline-block;
+        justify-content: start;
+        align-items: flex-start;
+        background-color: $color-text;
+        border-radius: 80%;
+        background-color:#100a1f;
+        color: $color-complementario;
+        box-shadow: 2px 4px 6px $color-text;
+        font-size: 1.5rem;
+        padding-top: 0.3rem;
+        margin-left: 6%;
+        margin-top: 2%;
+        position: absolute;
+    }
+    .overview{
+        height: auto;
+        backdrop-filter: blur(0.625rem);
+        background-color: #100a1f;
+        color: $color-text;
+        padding: 5%;
+        margin: 3%;
+        text-align: center;
+        border-top-right-radius: 3.125rem;
+        border-bottom-right-radius: 0.625rem;
+        border-top-left-radius: 0.625rem;
+        border-bottom-left-radius: 3.125rem;
+        box-shadow: 5px 8px 12px $color-text-dark;
+    }
+    .card-fecha{
+        font-size: 1.3rem;
+        text-align: start;
+        margin-bottom: 5%;
+        color: $color-complementario;
+    }
 }
 
 .formulario__input {
@@ -246,13 +302,13 @@ body{
     margin-bottom: 1.2rem;
     padding: 0.4rem;
     border: none;
-    background: #F2F2F2;
+    background: $color-text;
     font-size: 1rem;
     border-radius: 3px;
     transition: .3s ease all;
 }
 .formulario__input:focus {
-    border: 2px solid #007fff;
+    border: 2px solid $color-principal;
     outline: none;
     box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 }
@@ -269,7 +325,7 @@ body{
     color: #666666;
 }
 .mySelect:focus{
-    border: 2px solid #007fff;
+    border: 2px solid $color-principal;
     outline: none;
     box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 }
@@ -353,10 +409,10 @@ body{
     border-bottom-right-radius: 1rem !important;
     font-size: 1rem !important;
     font-weight: bold !important;
-    color: white !important;
+    color: $color-text !important;
     border: 2px solid !important;
-    background-color: #d4dcff !important;
-    background-image: linear-gradient(62deg, #d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%)!important;
+    background-color: $color-secundario !important;
+    background-image: linear-gradient(62deg, $color-secundario 0%, $gradiente-color-principal 30%, $color-principal 66%, $color-complementario 100%)!important;
     cursor: pointer !important;
     transition: all 300ms !important; 
 }
@@ -365,7 +421,7 @@ body{
     border-bottom-right-radius: 3.125rem !important;
     backdrop-filter: blur(0.625rem)!important;
     background-color: rgba(11, 11, 11, 0.4)!important;
-    color: white !important;
+    color: $color-text !important;
 }
 /* ----------------Full responsive design--------------- */
 /* -----------  Mediaqueries ----------- */

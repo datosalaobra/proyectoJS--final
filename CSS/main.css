@@ -43,7 +43,7 @@ body {
         border-bottom-left-radius: 0.625rem; }
       body main .contenedorPrincipal .cajaFondo div {
         margin: 6rem 2rem;
-        color: white;
+        color: #f7f7ff;
         transition: all 500ms; }
       body main .contenedorPrincipal .cajaFondo div p,
       body main .contenedorPrincipal .cajaFondo div button {
@@ -56,7 +56,7 @@ body {
         border-bottom-right-radius: 1rem;
         font-size: 1rem;
         font-weight: bold;
-        color: white;
+        color: #f7f7ff;
         border: 2px solid;
         background-color: #d4dcff;
         background-image: linear-gradient(62deg, #d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%);
@@ -81,7 +81,7 @@ body {
           height: auto;
           width: 100%;
           padding: 3rem 1.1rem;
-          background-color: white;
+          background-color: #f7f7ff;
           position: absolute;
           border-top-right-radius: 3.125rem;
           border-bottom-right-radius: 0.625rem;
@@ -93,7 +93,7 @@ body {
           height: auto;
           width: 100%;
           padding: 3rem 1.1rem;
-          background-color: white;
+          background-color: #f7f7ff;
           position: absolute;
           border-top-right-radius: 3.125rem;
           border-bottom-right-radius: 0.625rem;
@@ -112,7 +112,7 @@ body {
         border-bottom-right-radius: 1rem;
         font-size: 1rem;
         font-weight: bold;
-        color: white;
+        color: #f7f7ff;
         border: 2px solid #d4dcff;
         background-color: #d4dcff;
         background-image: linear-gradient(62deg, #d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%);
@@ -124,7 +124,7 @@ body {
   body footer {
     position: fixed;
     background-color: #100a1f;
-    color: white;
+    color: #f7f7ff;
     bottom: 0;
     width: 100%;
     height: 5%;
@@ -141,31 +141,42 @@ body {
   body .contenedor .pelicula {
     text-align: center; }
   body .contenedor .pelicula .titulo {
-    width: 90%;
-    font-size: 16px;
+    width: auto;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-left: 3%;
     margin-right: 3%;
-    margin-bottom: 10%;
-    background: #100a1f;
-    color: #fff;
+    margin-bottom: 5%;
+    padding: auto;
+    background: #031927;
+    color: #f7f7ff;
     backdrop-filter: blur(0.625rem);
     background-color: rgba(11, 11, 11, 0.4);
     border-top-right-radius: 3.125rem;
     border-bottom-right-radius: 0.625rem;
     border-top-left-radius: 0.625rem;
     border-bottom-left-radius: 3.125rem;
-    text-overflow: auto; }
+    box-shadow: 5px 8px 12px #031927;
+    text-overflow: hidden; }
   body .contenedor .pelicula .poster {
-    width: 90%;
-    margin-bottom: 10px;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 80%;
+    height: 20rem;
+    margin: 5% 2% 2% 3%;
     border-top-right-radius: 3.125rem;
     border-bottom-right-radius: 0.625rem;
     border-top-left-radius: 0.625rem;
-    border-bottom-left-radius: 3.125rem; }
-  body .pageStandar {
+    border-bottom-left-radius: 3.125rem;
+    box-shadow: 5px 8px 12px #031927; }
+  body .poster-end {
+    width: 80%;
+    height: auto;
+    margin: 3% 2% 2% 3%;
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 3.125rem;
+    box-shadow: 5px 8px 12px #031927; }
+  body .pageStandar, body .pagePremium {
     position: fixed;
     bottom: 0;
     background: #100a1f;
@@ -174,7 +185,7 @@ body {
     justify-content: center;
     gap: 20px;
     padding: 10px; }
-  body .pageStandar button {
+  body .pageStandar button, body .pagePremium button {
     cursor: pointer;
     border: none;
     display: flex;
@@ -184,7 +195,7 @@ body {
     height: 50px;
     width: 200px;
     background: #007fff;
-    color: #fff;
+    color: #f7f7ff;
     border-radius: 100px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -196,6 +207,41 @@ body {
     border-bottom-left-radius: 3.125rem; }
   body .pageStandar button:hover {
     background: #1affd5; }
+  body .card-body {
+    height: auto; }
+  body .calificacion {
+    width: 3rem;
+    display: inline-block;
+    justify-content: start;
+    align-items: flex-start;
+    background-color: #f7f7ff;
+    border-radius: 80%;
+    background-color: #100a1f;
+    color: #1affd5;
+    box-shadow: 2px 4px 6px #f7f7ff;
+    font-size: 1.5rem;
+    padding-top: 0.3rem;
+    margin-left: 6%;
+    margin-top: 2%;
+    position: absolute; }
+  body .overview {
+    height: auto;
+    backdrop-filter: blur(0.625rem);
+    background-color: #100a1f;
+    color: #f7f7ff;
+    padding: 5%;
+    margin: 3%;
+    text-align: center;
+    border-top-right-radius: 3.125rem;
+    border-bottom-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 3.125rem;
+    box-shadow: 5px 8px 12px #031927; }
+  body .card-fecha {
+    font-size: 1.3rem;
+    text-align: start;
+    margin-bottom: 5%;
+    color: #1affd5; }
 
 .formulario__input {
   width: 100%;
@@ -203,7 +249,7 @@ body {
   margin-bottom: 1.2rem;
   padding: 0.4rem;
   border: none;
-  background: #F2F2F2;
+  background: #f7f7ff;
   font-size: 1rem;
   border-radius: 3px;
   transition: .3s ease all; }
@@ -307,7 +353,7 @@ body {
   border-bottom-right-radius: 1rem !important;
   font-size: 1rem !important;
   font-weight: bold !important;
-  color: white !important;
+  color: #f7f7ff !important;
   border: 2px solid !important;
   background-color: #d4dcff !important;
   background-image: linear-gradient(62deg, #d4dcff 0%, #7d83ff 30%, #007fff 66%, #1affd5 100%) !important;
@@ -319,7 +365,7 @@ body {
   border-bottom-right-radius: 3.125rem !important;
   backdrop-filter: blur(0.625rem) !important;
   background-color: rgba(11, 11, 11, 0.4) !important;
-  color: white !important; }
+  color: #f7f7ff !important; }
 
 /* ----------------Full responsive design--------------- */
 /* -----------  Mediaqueries ----------- */

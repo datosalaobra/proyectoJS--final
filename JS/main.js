@@ -92,9 +92,9 @@ function validarCredenciales(pCorreo, ppassword){
 }
 
 function timeOutPremium(){
-    setTimeout(function(){window.location.href = './pages/userPremium'; },1000);
+    setTimeout(function(){window.location.href = './Pages/userPremium.html'; },1000);
 }
   
 function timeOutBasico(){
-    setTimeout(function(){window.location.href = './pages/userStandar.html'; },1000);
+    setTimeout(function(){window.location.href = './Pages/userStandar.html'; },1000);
 }
